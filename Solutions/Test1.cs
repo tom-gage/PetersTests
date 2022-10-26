@@ -82,7 +82,7 @@ namespace PetersTests.Solutions
                 }
 
                 //skip value if its negative
-                if (currentValue < 0)
+                if (currentValue < 0 || nextValue < 0)
                 {
                     continue;
                 }
@@ -93,8 +93,8 @@ namespace PetersTests.Solutions
                 }
             }
 
-            //if final value is greater than one, lowestValueNotInUse is 1
-            if (nextValue > 1)
+            //if final value is not one, one is not in use, so lowestValueNotInUse is 1
+            if (nextValue != 1)
             {
                 lowestValueNotInUse = 1;
             }

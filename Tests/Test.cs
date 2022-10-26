@@ -65,5 +65,14 @@ namespace PetersTests.Tests
             long actual = Test1.Solution(values);
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void smallNumbers()
+        {
+            long[] values = { 2147483645, 2147483646, 2147483647, -9999999 };
+            long expected = 1;
+            long actual = Test1.Solution(values);
+            Assert.Equal(expected, actual);
+        }
     }
 }
