@@ -33,7 +33,7 @@ namespace PetersTests.Tests
         [Fact]
         public void threeSentencesPunctuation()
         {
-            string sentence = "Hello there! General Kenobi. How nice to see you!";
+            string sentence = "Hello there? General Kenobi! How nice to see you!";
             int expected = 5;
             int actual = Test2.Solution(sentence);
 
@@ -45,6 +45,26 @@ namespace PetersTests.Tests
         {
             string sentence = "Hello there! General Kenobi. How nice to see you";
             int expected = 5;
+            int actual = Test2.Solution(sentence);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void allPunctuation()
+        {
+            string sentence = "!?..?!!?..?!";
+            int expected = 0;
+            int actual = Test2.Solution(sentence);
+
+            Assert.Equal(expected, actual);
+        }
+        
+        [Fact]
+        public void empty()
+        {
+            string sentence = "";
+            int expected = 0;
             int actual = Test2.Solution(sentence);
 
             Assert.Equal(expected, actual);
