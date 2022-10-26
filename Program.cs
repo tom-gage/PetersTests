@@ -5,8 +5,6 @@ Console.WriteLine("Program start!");
 
 while (true)
 {
-
-
     Console.WriteLine("Enter command");
     string input = Console.ReadLine();
 
@@ -28,22 +26,26 @@ bool HandleInput(string input)
         case "help":
             DisplayHelp();
             return false;
-        case "1":
-            Console.WriteLine("run test 1");
-            Test1.Solution(new int[] { });
+        case "test1":
+            Console.WriteLine("running test 1");
+            var inputData = new int[] { 1, 2, 3, 4 };
+            Console.WriteLine("Input data: { 1, 2, 3, 4 }");
+            Console.WriteLine("Smallest value not in use: " + Test1.Solution(inputData));
             return false;
-        case "2":
-            Console.WriteLine("run test 2");
-            Test2.Solution("Hello there. General Kenobi.");
+        case "test2":
+            Console.WriteLine("running test 2");
+            string inputString = "Hello there. General Kenobi. How is your mother doing these days?";
+            Console.WriteLine("Input data: " + inputString);
+            Console.WriteLine("Highest word Count: " +  Test2.Solution(inputString));
             return false;
         case "q":
-            Console.WriteLine("quit command");
+            Console.WriteLine("quitting");
             return true;
         case "quit":
-            Console.WriteLine("quit command");
+            Console.WriteLine("quitting");
             return true;
         case "exit":
-            Console.WriteLine("quit command");
+            Console.WriteLine("quitting");
             return true;
         default:
             Console.WriteLine("unknown command");
