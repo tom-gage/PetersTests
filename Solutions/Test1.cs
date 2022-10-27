@@ -39,14 +39,14 @@ namespace PetersTests.Solutions
                     continue;
                 }
 
-                if(currentValue - nextValue != 1)
+                if(Math.Abs(currentValue - nextValue) > 1)
                 {
                     lowestValueNotInUse = nextValue + 1;
                 }
             }
 
             //if final value is greater than one, lowestValueNotInUse is 1
-            if (nextValue > 1)
+            if (nextValue != 1)
             {
                 lowestValueNotInUse = 1;
             }
