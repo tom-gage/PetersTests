@@ -31,6 +31,26 @@ namespace PetersTests.Tests
         }
 
         [Fact]
+        public void twoSentences2()
+        {
+            string sentence = "We test coders. Give us a try?";
+            int expected = 4;
+            int actual = Test2.Solution(sentence);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void strangeSentence()
+        {
+            string sentence = "Forget  CVs..Save time . x x";
+            int expected = 2;
+            int actual = Test2.Solution(sentence);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void threeSentencesPunctuation()
         {
             string sentence = "Hello there? General Kenobi! How nice to see you!";
